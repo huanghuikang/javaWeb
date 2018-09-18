@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<stulist>
+	<student id = "3">
+		<name>范冰冰</name>
+		<password>123</password>
+		<gender>女</gender>
+		<birthday>1996-02-15</birthday>
+	</student>
+		<student id = "2">
+		<name>李晨</name>
+		<password>123</password>
+		<gender>男</gender>
+		<birthday>1988-02-05</birthday>
+	</student>
+		<student id = "3">
+		<name>爱冰冰</name>
+		<password>123</password>
+		<gender>女</gender>
+		<birthday>2010-04-15</birthday>
+	</student>
+</stulist>
