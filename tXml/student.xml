@@ -13,8 +13,15 @@
 		<gender>男</gender>
 		<birthday>1988-02-05</birthday>
 	</student>
-		<student id = "3">
+		<student id = "1">
 		<name>爱冰冰</name>
+		<password>123</password>
+		<gender>女</gender>
+		<birthday>2010-04-15</birthday>
+	</student>
+	<student id = "3">
+		<!-- <![CDATA[]]>表示转义 -->
+		<name><![CDATA[&glt;>林心如<]]></name>
 		<password>123</password>
 		<gender>女</gender>
 		<birthday>2010-04-15</birthday>
