@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE xml>
+<!--dtd约束的引用-->
+<!DOCTYPE students SYSTEM "student.dtd">
 <stulist>
 	<student id = "3">
 		<name>范冰冰</name>
