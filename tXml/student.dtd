@@ -1,5 +1,5 @@
-<!--dtd约束的使用 -->
 <?xml version="1.0" encoding="UTF-8"?>
+<!--dtd约束的使用 -->
 <!ELEMENT students (student*) >
 <!ELEMENT student (name,password,gender,birthday)>
 <!ELEMENT name (#PCDATA)>
