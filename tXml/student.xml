@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--  <!DOCTYPE xml>-->
+<!--xml中引用dtd的方式
+1.本地dtd文件：<!DOCTYPE students SYSTEM  "student.dtd">
+2.网络dtd文件：<!DOCTYPE students PUBLIC "名称空间"  "student.dtd"> -->
 <!--dtd约束的引用-->
 <!DOCTYPE students SYSTEM "student.dtd">
 <students>
