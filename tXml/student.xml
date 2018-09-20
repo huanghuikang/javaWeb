@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  <!DOCTYPE xml>-->
+<!--dtd约束的引用-->
+<!DOCTYPE students SYSTEM "student.dtd">
+<students>
+	<student number="S_1001">
+		<name>范冰冰</name>
+		<password>123</password>
+		<gender>女</gender>
+		<birthday>1996-02-15</birthday>
+	</student>
+	<student number="S_1002">
+		<name>李晨</name>
+		<password>123</password>
+		<gender>男</gender>
+		<birthday>1988-02-05</birthday>
+	</student>
+	
+</students>
