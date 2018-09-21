@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<students
+	xmlns="http://www.gyf.cn/xml"
+	xsi:schemaLocation="http://www.gyf.cn/xml student.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<student number="itgyf_1001">
+		<name>gyf</name>
+		<password>123</password>
+		<gender>male</gender>
+		<!-- 这是有顺序的 -->
+		<birthday>2017-11-12</birthday>
+	</student>
+</students>
