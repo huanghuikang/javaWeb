@@ -12,3 +12,6 @@ JAXP：
 sun公司提供的解析。支持dom和sax。JAXP（Java API for XMLProcessing，意为XML处理的Java API）,它提供解析和验证XML文档的能力。<br>
 JDOM：
 JDOM是一个开源项目，它基于树型结构，利用纯JAVA的技术对XML文档实现解析、生成、序列化以及多种操作。
+DOM4J：
+dom for java
+dom4j是一个Java的XML API，是jdom的升级品，用来读写XML文件的。dom4j是一个十分优秀的JavaXML API，具有性能优异、功能强大和极其易使用的特点，它的性能超过sun公司官方的dom技术
