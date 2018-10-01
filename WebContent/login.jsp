@@ -23,3 +23,14 @@
 			</tr>
 		</table>
 	</form>
+	<%
+		String username = request.getParameter("username");
+		String pass = request.getParameter("pass");
+		if("user".equals(username) && "123".equals(pass)){
+			out.write("登录成功");
+		}else{
+			out.write("登录失败");
+		}
+	%>
+</body>
+</html>
