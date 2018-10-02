@@ -1,7 +1,7 @@
 <%@page import="java.text.SimpleDateFormat"%>
-<%@ import="java.util.Date" %>
-<%@ import="java.text.SimpleDateFormat" %>
-<%@ import="java.text.DateFormat" %>
+<%@ import="java.util.Date"%>
+<%@ import="java.text.SimpleDateFormat"%>
+<%@ import="java.text.DateFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,9 +25,9 @@
 	<%--获取Servlet的上下文 --%>
 	<%=i+j%>
 	<br>
-	<%=request.getServletContext().getRealPath("") %>
+	<%=request.getServletContext().getRealPath("")%>
 	<br>
 	<!-- 显示日期 -->
-	<%=df.format(new Date()) %>
+	<%=df.format(new Date())%>
 </body>
 </html>
