@@ -43,3 +43,10 @@ include<br>
 Taglib 【后面再学】<br>
 作用：在JSP页面中导入JSTL标签库。替换jsp中的java代码片段。<br>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %><br>
+JSP的6个常用动作<br>
+<jsp:include > 动态包含<br>
+<jsp:forward> 请求转发<br>
+<jsp:param> 设置请求参数<br>
+<jsp:useBean> 创建一个对象<br>
+<jsp:setProperty> 给指定的对象属性赋值<br>
+<jsp:getProperty> 取出指定对象的属性值<br>
