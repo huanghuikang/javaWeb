@@ -46,7 +46,21 @@ Taglib 【后面再学】<br>
 JSP的6个常用动作<br>
 <jsp:include > 动态包含<br>
 <jsp:forward > 请求转发<br>
+注：一个jsp页面只能写一个转发<br>
 <jsp:param > 设置请求参数<br>
 <jsp:useBean > 创建一个对象<br>
 <jsp:setProperty > 给指定的对象属性赋值<br>
 <jsp:getProperty > 取出指定对象的属性值<br>
+<p/>
+JSP的9大内置对象<br>
+内置对象是指在JSP的<%=%> 和<% %>中可以直接使用的对象<br>
+对象名	类型	说明<br>
+request &nbsp;&nbsp;	javax.servlet.http.HttpServletRequest	
+response &nbsp;&nbsp;	javax.servlet.http.HttpServletResponse	
+session &nbsp;&nbsp;	javax.servlet.http.HttpSession &nbsp;&nbsp;	由session="true"开关
+application	 &nbsp;&nbsp; javax.servlet.ServletContext	
+exception &nbsp;&nbsp;	java.lang.Throwable &nbsp;&nbsp;	由isErrorPage="false"开关
+page &nbsp;&nbsp;	java.lang.Object当前对象this &nbsp;&nbsp;	当前servlet实例
+config &nbsp;&nbsp;	javax.servlet.ServletConfig	
+out	 &nbsp;&nbsp; javax.servlet.jsp.JspWriter &nbsp;&nbsp;	字符输出流，相当于 printWriter对象
+pageContext	 javax.servlet.jsp.PageContext	
