@@ -63,4 +63,21 @@ exception &nbsp;&nbsp;	java.lang.Throwable &nbsp;&nbsp;	由isErrorPage="false"�
 page &nbsp;&nbsp;	java.lang.Object当前对象this &nbsp;&nbsp;	当前servlet实例<br>
 config &nbsp;&nbsp;	javax.servlet.ServletConfig	<br>
 out	 &nbsp;&nbsp; javax.servlet.jsp.JspWriter &nbsp;&nbsp;	字符输出流，相当于 printWriter对象<br>
-pageContext	 javax.servlet.jsp.PageContext	<br>
+<front color="red">pageContext	 &nbsp;&nbsp; javax.servlet.jsp.PageContext	</front><br>
+<div></div>
+pageContext(重要)<br>
+概述<br>
+本身也是一个域对象：它可以操作其它三个域对象（request session application）的数据<br>
+常用方法<br>
+void setAttribute(String name,Object o);<br>
+Object getAttribute(String name);<br>
+void removeAttribute(String name);<br>
+操作其它域对象的方法<br>
+void setAttribute(String name,Object o，int Scope);<br>
+Object getAttribute(String name,int Scope);<br>
+void removeAttribute(String name,int Scope);<br>
+scpoe的值：<br><br>
+PageContext.PAGE_SCOPE <br>
+PageContext.REQUEST_SCOPE <br><br>
+PageContext.SESSION_SCOPE <br>
+PageContext.APPLICATION_SCOPE<br>
