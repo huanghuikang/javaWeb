@@ -55,12 +55,12 @@ JSP的6个常用动作<br>
 JSP的9大内置对象<br>
 内置对象是指在JSP的<%=%> 和<% %>中可以直接使用的对象<br>
 对象名	类型	说明<br>
-request &nbsp;&nbsp;	javax.servlet.http.HttpServletRequest	
-response &nbsp;&nbsp;	javax.servlet.http.HttpServletResponse	
-session &nbsp;&nbsp;	javax.servlet.http.HttpSession &nbsp;&nbsp;	由session="true"开关
-application	 &nbsp;&nbsp; javax.servlet.ServletContext	
-exception &nbsp;&nbsp;	java.lang.Throwable &nbsp;&nbsp;	由isErrorPage="false"开关
-page &nbsp;&nbsp;	java.lang.Object当前对象this &nbsp;&nbsp;	当前servlet实例
-config &nbsp;&nbsp;	javax.servlet.ServletConfig	
-out	 &nbsp;&nbsp; javax.servlet.jsp.JspWriter &nbsp;&nbsp;	字符输出流，相当于 printWriter对象
-pageContext	 javax.servlet.jsp.PageContext	
+request &nbsp;&nbsp;	javax.servlet.http.HttpServletRequest	<br>
+response &nbsp;&nbsp;	javax.servlet.http.HttpServletResponse	<br>
+session &nbsp;&nbsp;	javax.servlet.http.HttpSession &nbsp;&nbsp;	由session="true"开关<br>
+application	 &nbsp;&nbsp; javax.servlet.ServletContext	<br>
+exception &nbsp;&nbsp;	java.lang.Throwable &nbsp;&nbsp;	由isErrorPage="false"开关<br>
+page &nbsp;&nbsp;	java.lang.Object当前对象this &nbsp;&nbsp;	当前servlet实例<br>
+config &nbsp;&nbsp;	javax.servlet.ServletConfig	<br>
+out	 &nbsp;&nbsp; javax.servlet.jsp.JspWriter &nbsp;&nbsp;	字符输出流，相当于 printWriter对象<br>
+pageContext	 javax.servlet.jsp.PageContext	<br>
