@@ -81,3 +81,7 @@ PageContext.PAGE_SCOPE <br>
 PageContext.REQUEST_SCOPE <br><br>
 PageContext.SESSION_SCOPE <br>
 PageContext.APPLICATION_SCOPE<br>
+<div></div>
+JSP的EL表达式<br>
+EL概述:EL表达式：expression language 表达式语言,用于简化jsp中java代码开发。<br>
+&nbsp;&nbsp;它不是一种开发语言，是jsp中获取数据的一种规范
