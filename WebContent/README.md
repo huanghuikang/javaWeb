@@ -76,12 +76,18 @@ void removeAttribute(String name);<br>
 void setAttribute(String name,Object o，int Scope);<br>
 Object getAttribute(String name,int Scope);<br>
 void removeAttribute(String name,int Scope);<br>
-scpoe的值：<br><br>
+scpoe的值：<br>
 PageContext.PAGE_SCOPE <br>
-PageContext.REQUEST_SCOPE <br><br>
+PageContext.REQUEST_SCOPE <br>
 PageContext.SESSION_SCOPE <br>
 PageContext.APPLICATION_SCOPE<br>
-<div></div>
+<br>
 JSP的EL表达式<br>
 EL概述:EL表达式：expression language 表达式语言,用于简化jsp中java代码开发。<br>
-&nbsp;&nbsp;它不是一种开发语言，是jsp中获取数据的一种规范
+&nbsp;&nbsp;它不是一种开发语言，是jsp中获取数据的一种规范<br>
+获取数据<br>
+EL表达式只能获取存在4个作用域中的数据<br>
+${u} 原理： pageContext.findAttribute("u");<br>
+EL获取对于null这样的数据，在页面中表现为空字符串<br>
+${u.name} == u.getName()方法<br>
+点（.） 运算符相当于调了getter方法，点后页面跟的是属性名。<br>
