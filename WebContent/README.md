@@ -33,7 +33,6 @@ include<br>
 <%@ include file="/include/header.jsp" %><br>
 动态包含：<br>
 <jsp:include page="/include/header.jsp"></jsp:include><br>
-
 两者的区别：翻译的时间段不同<br>
 前者：在翻译时就把两个文件合并<br>
 后者：不会合并文件，当代码执行到include时，才包含另一个文件的内容。<br>
