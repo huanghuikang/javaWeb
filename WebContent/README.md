@@ -1,4 +1,4 @@
-JSP全称是Java Server Pages，它和servle技术一样，都是SUN公司定义的一种用于开发动态web资源的技术。JSP/Servlet规范。JSP实际上就是Servlet。<br>
+一、JSP全称是Java Server Pages，它和servle技术一样，都是SUN公司定义的一种用于开发动态web资源的技术。JSP/Servlet规范。JSP实际上就是Servlet。<br>
 JSP这门技术的最大的特点在于，写jsp就像在写html，但它相比html而言，html只能为用户提供静态数据，而Jsp技术允许在页面中嵌套java代码，为用户提供动态数据。
 <br>
 JSP的3个指令<br>
@@ -89,3 +89,12 @@ ${u} 原理： pageContext.findAttribute("u");<br>
 EL获取对于null这样的数据，在页面中表现为空字符串<br>
 ${u.name} == u.getName()方法<br>
 点（.） 运算符相当于调了getter方法，点后页面跟的是属性名。<br>
+<br><br><br>
+二、Servlet简介<br>
+Servlet是sun公司提供的一门用于开发动态web资源的技术。<br>
+Sun公司在其API中提供了一个servlet接口<br>
+Servlet 是运行在 Web 服务器中的小型 Java 程序（即：服务器端的小应用程序）。<br>
+servlet 通常通过 HTTP（超文本传输协议）接收和响应来自 Web 客户端的请求。<br>
+若想开发一个动态web资源(即开发一个Java程序向浏览器输出数据)，要完成2个步骤：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;编写一个Java类，实现servlet接口。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;把开发好的Java类部署到web服务器中。<br>
