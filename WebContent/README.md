@@ -98,3 +98,8 @@ servlet 通常通过 HTTP（超文本传输协议）接收和响应来自 Web �
 若想开发一个动态web资源(即开发一个Java程序向浏览器输出数据)，要完成2个步骤：<br>
 &nbsp;&nbsp;&nbsp;&nbsp;编写一个Java类，实现servlet接口。<br>
 &nbsp;&nbsp;&nbsp;&nbsp;把开发好的Java类部署到web服务器中。<br>
+1、Servlet生命周期（重要）<br>
+Servlet生命周期四个状态：实例化-->初始化-->服务->销毁<br>
+出生：（实例化-->初始化）第一次访问Servlet就出生（默认情况下）<br>
+活着：（服务）应用活着，servlet就活着<br>
+死亡：（销毁）应用卸载了servlet就销毁。<br>
