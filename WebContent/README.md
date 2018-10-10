@@ -103,3 +103,7 @@ Servlet生命周期四个状态：实例化-->初始化-->服务->销毁<br>
 出生：（实例化-->初始化）第一次访问Servlet就出生（默认情况下）<br>
 活着：（服务）应用活着，servlet就活着<br>
 死亡：（销毁）应用卸载了servlet就销毁。<br>
+2、Servlet实现的三种方式<br>
+&nbsp;&nbsp;实现javax.servlet.Servlet接口<br>
+&nbsp;&nbsp;继承javax.servet.GenericServlet类(适配器模式)<br>
+&nbsp;&nbsp;继承javax.servlet.http.HttpServlet类（模板方法设计模式）<br>
