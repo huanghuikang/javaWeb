@@ -107,3 +107,4 @@ Servlet生命周期四个状态：实例化-->初始化-->服务->销毁<br>
 &nbsp;&nbsp;实现javax.servlet.Servlet接口<br>
 &nbsp;&nbsp;继承javax.servet.GenericServlet类(适配器模式)<br>
 &nbsp;&nbsp;继承javax.servlet.http.HttpServlet类（模板方法设计模式）<br>
+HelloServlet(是HttpServlet的子类)-->>HttpServlet(是GenerServlet的子类)-->>GenericServlet(是Servlet实现类)-->>Servlet(接口)<br>
