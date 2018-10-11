@@ -108,3 +108,13 @@ Servlet生命周期四个状态：实例化-->初始化-->服务->销毁<br>
 &nbsp;&nbsp;继承javax.servet.GenericServlet类(适配器模式)<br>
 &nbsp;&nbsp;继承javax.servlet.http.HttpServlet类（模板方法设计模式）<br>
 HelloServlet(是HttpServlet的子类)-->>HttpServlet(是GenerServlet的子类)-->>GenericServlet(是Servlet实现类)-->>Servlet(接口)<br>
+3、Servlet映射细节<br>
+掌握Servlet映射规则<br>
+通配符* 代表任意字符串，如图：<br><br>
+url-pattern: *.do  以*.字符串的请求都可以访问 注：不要加/<br>
+url-pattern: /*  任意字符串都可以访问<br>
+url-pattern： /action/* 以/action开头的请求都可以访问<br>
+匹配规则：<br>
+优先级：从高到低<br>
+绝对匹配-->  /开头匹配 --> 扩展名方式匹配<br><br>
+如果url-pattern的值是/，表示执行默认映射。所有资源都是servlet<br>
