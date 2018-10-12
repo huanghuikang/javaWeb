@@ -126,5 +126,12 @@ HTTP消息头是指在超文本传输协议（ Hypertext Transfer Protocol ，HT
 HTTP消息头用来准确描述正在获取的资源、服务器或者客户端的行为<br>
 HTTP消息头定义了HTTP事务中的具体操作参数。<br>
 消息头包括请求时的消息头（请求头）和响应时的消息头（响应头）<br>
+1.1HTTP的常见请求头<br>
 Content-Length：表示请求消息正文的长度。<br>
 Cookie：这是最重要的请求头信息之一<br>
+Host：初始URL中的主机和端口。<br>
+1.2HTTP的常见响应头<br>
+Allow：	服务器支持哪些请求方法（如GET、POST等）。<br>
+Date	 当前的GMT时间。你可以用setDateHeader来设置这个头以避免转换时间格式的麻烦。<br>
+Refresh	表示浏览器应该在多少时间之后刷新文档，以秒计。除了刷新当前文档之外，你还可以通过setHeader("Refresh", "5; URL=http://host/path")让浏览器读取指定的页面。 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;注意Refresh头不属于HTTP 1.1正式规范的一部分，而是一个扩展，但Netscape和IE都支持它。<br>
