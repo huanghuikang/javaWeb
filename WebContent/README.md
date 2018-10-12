@@ -126,3 +126,5 @@ HTTP消息头是指在超文本传输协议（ Hypertext Transfer Protocol ，HT
 HTTP消息头用来准确描述正在获取的资源、服务器或者客户端的行为<br>
 HTTP消息头定义了HTTP事务中的具体操作参数。<br>
 消息头包括请求时的消息头（请求头）和响应时的消息头（响应头）<br>
+Content-Length：表示请求消息正文的长度。<br>
+Cookie：这是最重要的请求头信息之一<br>
