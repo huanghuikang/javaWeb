@@ -148,3 +148,41 @@ getOutputStream(); 字节输出流<br>
 200&nbsp;&nbsp;请求已成功，请求所希望的响应头或数据体将随此响应返回。<br>
 302&nbsp;&nbsp; 重定向<br>
 500&nbsp;&nbsp; 服务抛出异常<br>
+4、请求重定向
+请求重定向指：一个web资源收到客户端请求后，通知客户端去访问另外一个web资源，这称之为请求重定向。<br>
+重定向特点：地址栏会变，并发送2次请求，增加服务器负担<br>
+实现方式<br>
+response.sendRedirect()<br>
+实现原理：<br>
+302/307状态码和location头即可实现重定向<br>
+转发特点：地址栏不会变，客户端发送一次请求<br>
+4.1、response细节<br>
+getOutputStream和getWriter方法分别用于得到输出二进制数据、输出文本数据<br>
+getOutputStream和getWriter这两个方法互相排斥，调用了其中的任何一个方法后，就不能再调用另一方法。-->>  会抛异常。<br>
+Servlet程序向ServletOutputStream或PrintWriter对象中写入的数据将被Servlet引擎从response里面获取，Servlet引擎将这些数据当作响应消息的正文，然后再与响应状态行和各响应头组合后输出到客户端。 <br>
+Serlvet的service方法结束后，Servlet引擎将检查getWriter或getOutputStream方法返回的输出流对象是否已经调用过close方法，如果没有，Servlet引擎将调用close方法关闭该输出流对象。 <br>
+4.2、HttpServletRequest
+简介：<br>
+HttpServletRequest对象代表客户端的请求，当客户端通过HTTP协议访问服务器时，HTTP请求头中的所有信息都封装在这个对象中，开发人员通过这个对象的方法，可以获得客户这些信息。<br>
+***request常用方法<br>
+4.21、获得客户端信息
+getRequestURL方法返回客户端发出请求时的完整URL。
+getRequestURI方法返回请求行中的资源名部分。
+getQueryString 方法返回请求行中的参数部分。
+getRemoteAddr方法返回发出请求的客户机的IP地址
+getRemoteHost方法返回发出请求的客户机的完整主机名
+getRemotePort方法返回客户机所使用的网络端口号
+getLocalAddr方法返回WEB服务器的IP地址。
+getLocalName方法返回WEB服务器的主机名
+getMethod得到客户机请求方式
+
+2.22、获得客户端请求头
+getHead(name)方法 
+getHeaders(String name)方法 
+getHeaderNames方法
+4.23、获得客户端请求参数(客户端提交的数据)
+getParameter(name)方法
+getParameterValues（String name）方法
+getParameterNames方法 
+getParameterMap方法  //做框架用，非常实用
+getInputStream
