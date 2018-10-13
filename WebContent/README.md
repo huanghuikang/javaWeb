@@ -165,24 +165,44 @@ Serlvet的service方法结束后，Servlet引擎将检查getWriter或getOutputSt
 简介：<br>
 HttpServletRequest对象代表客户端的请求，当客户端通过HTTP协议访问服务器时，HTTP请求头中的所有信息都封装在这个对象中，开发人员通过这个对象的方法，可以获得客户这些信息。<br>
 ***request常用方法<br>
-4.21、获得客户端信息
-getRequestURL方法返回客户端发出请求时的完整URL。
-getRequestURI方法返回请求行中的资源名部分。
-getQueryString 方法返回请求行中的参数部分。
-getRemoteAddr方法返回发出请求的客户机的IP地址
-getRemoteHost方法返回发出请求的客户机的完整主机名
-getRemotePort方法返回客户机所使用的网络端口号
-getLocalAddr方法返回WEB服务器的IP地址。
-getLocalName方法返回WEB服务器的主机名
-getMethod得到客户机请求方式
+4.21、获得客户端信息<br>
+getRequestURL方法返回客户端发出请求时的完整URL。<br>
+getRequestURI方法返回请求行中的资源名部分。<br>
+getQueryString 方法返回请求行中的参数部分。<br>
+getRemoteAddr方法返回发出请求的客户机的IP地址<br>
+getRemoteHost方法返回发出请求的客户机的完整主机名<br>
+getRemotePort方法返回客户机所使用的网络端口号<br>
+getLocalAddr方法返回WEB服务器的IP地址。<br>
+getLocalName方法返回WEB服务器的主机名<br>
+getMethod得到客户机请求方式<br>
 
-2.22、获得客户端请求头
-getHead(name)方法 
-getHeaders(String name)方法 
-getHeaderNames方法
-4.23、获得客户端请求参数(客户端提交的数据)
-getParameter(name)方法
-getParameterValues（String name）方法
-getParameterNames方法 
-getParameterMap方法  //做框架用，非常实用
-getInputStream
+2.22、获得客户端请求头<br>
+getHead(name)方法 <br>
+getHeaders(String name)方法 <br>
+getHeaderNames方法<br>
+4.23、获得客户端请求参数(客户端提交的数据)<br>
+getParameter(name)方法<br>
+getParameterValues（String name）方法<br>
+getParameterNames方法 <br>
+getParameterMap方法  //做框架用，非常实用<br>
+getInputStream<br>
+5、实现请求转发<br>
+请求转发指一个web资源收到客户端请求后，通知服务器去调用另外一个web资源进行处理。<br>
+request对象提供了一个getRequestDispatcher方法，该方法返回一个RequestDispatcher对象，调用这个对象的forward方法可以实现请求转发。<br>
+request对象同时也是一个域对象，开发人员通过request对象在实现转发时，把数据通过request对象带给其它web资源处理。<br>
+setAttribute方法 <br>
+getAttribute方法  <br>
+removeAttribute方法<br>
+getAttributeNames方法<br>
+6、实现请求重定向<br><br>
+重定向机制的运作流程<br>
+1、用户在浏览器端输入特定URL，请求访问服务器端的某个组件<br>
+2、服务器端的组件返回一个状态码为302的响应结果。<br>
+3、当浏览器端接收到这种响应结果后，再立即自动请求访问另一个web组件<br>
+4、浏览器端接收到来自另一个web组件的响应结果。<br>
+HttpServeltResponse的sendRedirect(String location)用于重定向<br>
+7、转发和重定向的区别<br>
+域对象：session,request,page...<br>
+域:区间、范围<br>
+重定向：以前的request中存放的变量全部失效，并进入一个新的request作用域。<br>
+转发：以前的request中存放的变量不会失效，就像把两个页面拼到了一起。<br>
