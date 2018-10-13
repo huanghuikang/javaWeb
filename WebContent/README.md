@@ -135,3 +135,16 @@ Allow：	服务器支持哪些请求方法（如GET、POST等）。<br>
 Date	 当前的GMT时间。你可以用setDateHeader来设置这个头以避免转换时间格式的麻烦。<br>
 Refresh	表示浏览器应该在多少时间之后刷新文档，以秒计。除了刷新当前文档之外，你还可以通过setHeader("Refresh", "5; URL=http://host/path")让浏览器读取指定的页面。 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;注意Refresh头不属于HTTP 1.1正式规范的一部分，而是一个扩展，但Netscape和IE都支持它。<br>
+四、Request&Response
+Web服务器收到客户端的http请求，会针对每一次请求，分别创建一个用于代表请求的request对象、和代表响应的response对象。<br>
+1、响应正文（主体）<br>
+getWrite(); 字符输出流<br>
+getOutputStream(); 字节输出流<br>
+2、响应编码:
+案例：向客户端输出中文<br>
+3、响应状态码<br>
+常见的状态码参照：http://tool.oschina.net/commons?type=5<br>
+404&nbsp;&nbsp;请求失败，请求所希望得到的资源未被在服务器上发现<br>
+200&nbsp;&nbsp;请求已成功，请求所希望的响应头或数据体将随此响应返回。<br>
+302&nbsp;&nbsp; 重定向<br>
+500&nbsp;&nbsp; 服务抛出异常<br>
