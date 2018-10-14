@@ -135,6 +135,7 @@ Allow：	服务器支持哪些请求方法（如GET、POST等）。<br>
 Date	 当前的GMT时间。你可以用setDateHeader来设置这个头以避免转换时间格式的麻烦。<br>
 Refresh	表示浏览器应该在多少时间之后刷新文档，以秒计。除了刷新当前文档之外，你还可以通过setHeader("Refresh", "5; URL=http://host/path")让浏览器读取指定的页面。 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;注意Refresh头不属于HTTP 1.1正式规范的一部分，而是一个扩展，但Netscape和IE都支持它。<br>
+<br><br><br>
 四、Request&Response
 Web服务器收到客户端的http请求，会针对每一次请求，分别创建一个用于代表请求的request对象、和代表响应的response对象。<br>
 1、响应正文（主体）<br>
@@ -206,7 +207,7 @@ HttpServeltResponse的sendRedirect(String location)用于重定向<br>
 域:区间、范围<br>
 重定向：以前的request中存放的变量全部失效，并进入一个新的request作用域。<br>
 转发：以前的request中存放的变量不会失效，就像把两个页面拼到了一起。<br>
-
+<br><br><br>
 五、会话<br>
 什么是会话<br>
 会话可简单理解为：用户开一个浏览器，点击多个超链接，访问服务器多个web资源，然后关闭浏览器，整个过程称之为一个会话。<br>
@@ -215,3 +216,26 @@ HttpServeltResponse的sendRedirect(String location)用于重定向<br>
 Cookie是客户端技术，程序把每个用户的数据以cookie的形式写给用户各自的浏览器。当用户使用浏览器再去访问服务器中的web资源时，就会带着各自的数据去。这样，web资源处理的就是用户各自的数据了。<br>
 1.2、Session<br>
 Session是服务器端技术，利用这个技术，服务器在运行时可以为每一个用户的浏览器创建一个其独享的HttpSession对象，由于session为用户浏览器独享，所以用户在访问服务器的web资源时，可以把各自的数据放在各自的session中，当用户再去访问服务器中的其它web资源时，其它web资源再从用户各自的session中取出数据为用户服务<br>
+2、Cookie API<br>
+2.1、javax.servlet.http.Cookie<br>
+2.21、javax.servlet.http.Cookie类用于创建一个Cookie<br>
+2.22、response接口中定义了一个addCookie方法，它用于在其响应头中增加一个相应的Set-Cookie头字段。<br> 
+2.23、request接口中也定义了一个getCookies方法，它用于获取客户端提交的Cookie。<br>
+3、Cookie类的方法： <br>
+public Cookie(String name,String value)<br>
+setValue与getValue方法 <br>
+setMaxAge与getMaxAge方法 (秒)<br>
+setPath与getPath方法<br>
+setDomain与getDomain方法<br>
+getName方法<br>
+4、Cookie应用场景<br>
+4.1、记录上次访问时间，用Cookie的maxAge方法，设置cookies的存活时间<br>
+4.11、maxAge:cookie的缓存时间。默认是-1，默认存在浏览器的缓存中。单位是秒<br>
+&nbsp;&nbsp;&nbsp;&nbsp;负数：表示cookie的数据存在浏览器缓存中<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0：表示删除cookie<br>
+&nbsp;&nbsp;&nbsp;&nbsp;正数：缓存在持久化磁盘上的时间<br>
+5、Cookie细节<br>
+一个Cookie只能标识一种信息，它至少含有一个标识该信息的名称（NAME）和设置值（VALUE）。 <br>
+一个WEB站点可以给一个WEB浏览器发送多个Cookie，一个WEB浏览器也可以存储多个WEB站点提供的Cookie。<br>
+浏览器一般只允许存放300个Cookie，每个站点最多存放20个Cookie，每个Cookie的大小限制为4KB。<br>
+如果创建了一个cookie，并将他发送到浏览器，默认情况下它是一个会话级别的cookie（即存储在浏览器的内存中），用户退出浏览器之后即被删除。若希望浏览器将该cookie存储在磁盘上，则需要使用maxAge，并给出一个以秒为单位的时间。将最大时效设为0则是命令浏览器删除该cookie。<br>
