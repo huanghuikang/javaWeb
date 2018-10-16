@@ -239,3 +239,10 @@ getName方法<br>
 一个WEB站点可以给一个WEB浏览器发送多个Cookie，一个WEB浏览器也可以存储多个WEB站点提供的Cookie。<br>
 浏览器一般只允许存放300个Cookie，每个站点最多存放20个Cookie，每个Cookie的大小限制为4KB。<br>
 如果创建了一个cookie，并将他发送到浏览器，默认情况下它是一个会话级别的cookie（即存储在浏览器的内存中），用户退出浏览器之后即被删除。若希望浏览器将该cookie存储在磁盘上，则需要使用maxAge，并给出一个以秒为单位的时间。将最大时效设为0则是命令浏览器删除该cookie。<br>
+3、Session API<br>
+3.1session概述<br>
+在WEB开发中，服务器可以为每个用户浏览器创建一个会话对象（session对象），注意：一个浏览器独占一个session对象(默认情况下)。因此，在需要保存用户数据时，服务器程序可以把用户数据写到用户浏览器独占的session中，当用户使用浏览器访问其它程序时，其它程序可以从用户的session中取出该用户的数据，为用户服务。<br>
+Session和Cookie的主要区别在于：<br>
+Cookie是把用户的数据写给用户的浏览器。<br>
+Session技术把用户的数据写到用户独占的session中。<br>
+Session对象由服务器创建，开发人员可以调用request对象的getSession方法得到session对象。<br>
