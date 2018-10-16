@@ -246,3 +246,31 @@ Session和Cookie的主要区别在于：<br>
 Cookie是把用户的数据写给用户的浏览器。<br>
 Session技术把用户的数据写到用户独占的session中。<br>
 Session对象由服务器创建，开发人员可以调用request对象的getSession方法得到session对象。<br>
+3.2、Session的疑问<br>
+疑问：服务器是如何实现一个session为一个用户浏览器服务的？<br>
+服务器会为每个浏览器分配一个session ID,然后把Session ID通过Cookie的形式存储在客户端<br>
+3.3、Session的应用场景<br>
+购物车实现、验证码登录<br>
+3.4、HttpSession常用方法<br>
+把数据保存在HttpSession对象中，该对象也是一个域对象。<br>
+void setAttribute(String name,Object value);<br>
+Object getAttribute(String name);<br>
+void removeAttribute(String name);<br>
+HttpSession.getId()<br>
+setMaxInactiveInterval(int interval)  设置session的存活时间<br>
+invalidate() 使此会话无效<br>
+
+3.5、getSession():内部执行原理<br>
+HttpSession request.getSession():内部执行原理<br>
+1、获取名称为JSESSIONID的cookie的值。<br>
+2、没有这样的cookie，创建一个新的HttpSession对象，分配一个唯一的SessionID，并且向客户端写了一个名字为JSESSIONID=sessionID的cookie<br>
+3、有这样的Cookie，获取cookie的值（即HttpSession对象的值），从服务器的内存中根据ID找那个HttpSession对象：<br>
+找到了：取出继续为你服务。<br>
+找不到：从2开始。<br>
+3.6、Session的状态三种：
+创建：当浏览器第一次访问服务器动态资源就创建<br>
+活着：服务器应用运行时<br>
+死亡：
+Session.invalidate();强制销毁<br>
+超时：默认30分钟<br>
+setMaxInactiveInterval(int ）单位秒<br>
