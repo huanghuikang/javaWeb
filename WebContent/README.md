@@ -274,3 +274,8 @@ HttpSession request.getSession():内部执行原理<br>
 Session.invalidate();强制销毁<br>
 超时：默认30分钟<br>
 setMaxInactiveInterval(int ）单位秒<br>
+3.7、在Web.xml中配置Session的有效时间<br>
+<session-config><br>
+<!--单位是分钟--><br>
+<session-timeout>1</session-timeout><br>
+<session-config><br>
