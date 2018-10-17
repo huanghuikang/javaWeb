@@ -279,3 +279,27 @@ setMaxInactiveInterval(int ）单位秒<br>
 <!--单位是分钟--><br>
 <session-timeout>1</session-timeout><br>
 <session-config><br>
+  3.8、Session的持久化<br>
+为什么要持久化Session<br>
+持久化的优点：
+节约内存空间；<br>
+确保在服务器重启或单个Web应用重启后，能回复重启前的会话；<br>
+
+持久化状态转化<br>
+Session在其生命周期中，可能会在运行时状态和持久化状态之间转换。<br>
+
+3.81、搁置：
+会话从运行时状态变为持久化状态的过程称为 —— 搁置；<br>
+在以下情况下，Session会被搁置：<br>
+当服务器重启或单个Web应用终止时，Web应用中的Session会被搁置；<br>
+会话处于不活动状态的时间太长，达到了特定的限定值；<br>
+Web应用中处于运行状态的会话数目太多，达到了特定的限制值，部分Session被搁置<br>
+
+3.82激活<br>
+会话从持久化状态变为运行时状态的过程称为激活；<br>
+在以下情况下，Session会被激活：
+当服务器重启或单个Web应用重启时，Web应用中的Session会被激活<br>
+处于Session中的客户端想Web应用发出HTTP请求，相应的Session会被激活<br>
+3.9、持久化对象系列化接口<br>
+当存在Session中的对象，重启tomcat时，如果有session对象，会出现下面的问题<br>
+表示对象不能被序列化，需要让Book实现序列化接口Serialize<br>
